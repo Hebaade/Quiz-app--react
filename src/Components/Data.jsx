@@ -31,7 +31,7 @@ export const Data = [
   },
   {
     question: "CSS stand for?",
-    answer: ["Cascading Style Sheets", "cose style sheets"],
+    answer: ["Cascading Style Sheets", "code style sheets"],
     validAnswer: "Cascading Style Sheets",
   },
 ];
