@@ -1,34 +1,32 @@
-import { useState } from "react"
-import { Data } from "./Data"
+import { useState } from "react";
+import { Data } from "./Data";
 
 export default function MainCard() {
-    const [number, setNumber] = useState(0);
-    const [result, setResult] = useState(0);
-    const [disable,setDisable] = useState(false)
+  const [number, setNumber] = useState(0);
+  const [result, setResult] = useState(0);
+  const [disable, setDisable] = useState(false);
+  const [start, setStart] = useState(0);
   const checkAnswer = (e) => {
-         let res = result;
-      if (e === Data[number].validAnswer) {
-          setResult(res+ 1)
-        }
+    let res = result;
+    if (e === Data[number].validAnswer) {
+      setResult(res + 1);
     }
-
-    const changeQuestion = () => {
-        let num = number;
-        if (number <6) {
-             num = num + 1;
-            setNumber(num);
-        }
-        else{
-            setDisable(true)
-        }
+  };
+  const changeQuestion = () => {
+    let num = number;
+    if (number < 6) {
+      num = num + 1;
+      setNumber(num);
+    } else {
+      setDisable(true);
     }
-    const restart = () => {
-        setDisable(false)
-        setNumber(0)
-      setResult(0)
-      setStart(0)
-  }
-  const [start,setStart]=useState(0)
+  };
+  const restart = () => {
+    setDisable(false);
+    setNumber(0);
+    setResult(0);
+    setStart(0);
+  };
   return (
     <div>
       {!start ? (
