@@ -31,7 +31,7 @@ export default function MainCard() {
     <div>
       {!start ? (
         <div className="content">
-          <h1 style={{ marginTop: "25px" }}>Start Quiz</h1>
+          <h1 style={{ marginTop: "25px",fontSize:"55px" }}>Start Quiz</h1>
           <button className="next" onClick={() => setStart(1)}>
             Start
           </button>
