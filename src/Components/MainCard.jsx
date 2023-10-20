@@ -39,7 +39,7 @@ export default function MainCard() {
       ) : (
         <>
           <p className="NumberOfQue">
-            {number}/{Data.length - 1} Question
+            {number}/{Data.length } Question
           </p>
           <section>
             {!disable ? (
@@ -61,7 +61,7 @@ export default function MainCard() {
                 <div>
                   <h1>Your result is:</h1>
                   <h2 className="result">
-                    {result}/{Data.length - 1}
+                    {result}/{Data.length }
                   </h2>
                 </div>
                 <button className="reset" onClick={() => restart()}>
